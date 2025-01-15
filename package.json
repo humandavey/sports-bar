@@ -1,0 +1,20 @@
+{
+  "name": "sports-bar-server",
+  "version": "1.0.0",
+  "description": "A website for tracking scores, updates, chatter, and news about your favorite leagues!",
+  "license": "MIT",
+  "author": "Davey Adams",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "serve": "node build/index.js",
+    "full": "tsc && node build/index.js"
+  },
+  "dependencies": {
+    "firebase": "^11.1.0",
+    "firebase-core": "^1.0.2",
+    "cors": "^2.8.17",
+    "express": "^5.0.0"
+  }
+}
