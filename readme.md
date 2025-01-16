@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/45489186-8b17-4add-a3f1-b6566c426ba7/deploy-status)](https://app.netlify.com/sites/sportsbar/deploys)
 # sports-bar
 
 Sports Bar is an open source (MIT License), website for tracking scores, updates, chatter, and news about your favorite leagues!
