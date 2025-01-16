@@ -7,13 +7,13 @@ export default () => {
   return (
     <>
       <div className='header-container'>
-        <h1 className='header-title'>Sports Bar</h1>
+        <img tabIndex={0} className='header-img' src='./logo_black.svg' />
         <div className='header-nav'>
-          <p className='header-nav-item' onClick={() => navigate('/')}>Home</p>
-          <p className='header-nav-item' onClick={() => navigate('/scores')}>Scores</p>
-          <p className='header-nav-item' onClick={() => navigate('/schedule')}>Schedule</p>
-          <p className='header-nav-item' onClick={() => navigate('/discussion')}>Discussion</p>
-          <p className='header-nav-item' onClick={() => navigate('/account')}>Account</p>
+          <p tabIndex={0} className='header-nav-item' onClick={() => navigate('/')}>Home</p>
+          <p tabIndex={0} className='header-nav-item' onClick={() => navigate('/scores')}>Scores</p>
+          <p tabIndex={0} className='header-nav-item' onClick={() => navigate('/schedule')}>Schedule</p>
+          <p tabIndex={0} className='header-nav-item' onClick={() => navigate('/discussion')}>Discussion</p>
+          <p tabIndex={0} className='header-nav-item' onClick={() => navigate('/account')}>Account</p>
         </div>
       </div>
     </>

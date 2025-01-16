@@ -11,12 +11,17 @@ html body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 20rem 0 20rem;
+  padding: 0 2rem;
   background-color: white;
-  box-shadow: 0 1px 3px 0 rgb(0, 0, 0, 0.1), 0 1px 2px -1px rgb(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 
-.header-title:hover {
+.header-img {
+  width: 100px;
+  height: 100px;
+}
+
+.header-img:hover {
   cursor: pointer;
 }
 
@@ -29,41 +34,46 @@ html body {
 
 .header-nav-item {
   margin: 8px;
-  color: rgb(75, 85, 99, var(--tw-text-opacity, 1));
+  color: rgb(75 85 99);
 }
 
 .header-nav-item:hover {
-  color: rgb(17, 24, 39, var(--tw-text-opacity, 1));
+  color: rgb(17 24 39);
   cursor: pointer;
 }
 
 .content {
-  background-color: rgb(243, 244, 246, var(--tw-bg-opacity, 1));
-  height: 100vh;
+  background-color: rgb(243 244 246);
+  min-height: 100vh;
 }
 
 .home-content {
-  display: flex;
-  padding: 2rem 20rem 0 20rem;
-  align-items: flex-start;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
 }
 
 .card-container {
   background-color: white;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 15px;
-  box-shadow: 0 1px 3px 0 rgb(0, 0, 0, 0.1), 0 1px 2px -1px rgb(0, 0, 0, 0.1);
-  flex-grow: 0;
-  flex-shrink: 0;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 
-.card-container:not(:first-child) {
-  margin-left: 2rem;
+.scores-card {
+  grid-column: span 1;
 }
 
 .league-selector-container {
   display: inline-block;
-  background-color: rgb(243, 244, 246, var(--tw-bg-opacity, 1));
+  background-color: rgb(243 244 246);
   border-radius: 7px;
   margin-top: 1rem;
 }
@@ -95,9 +105,9 @@ html body {
 .score-container {
   display: flex;
   align-items: center;
-  min-width: 40vw;
+  width: 100%;
   justify-content: space-between;
-  box-shadow: 0 1px 3px 0 rgb(0, 0, 0, 0.1), 0 1px 2px -1px rgb(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   border-radius: 10px;
 }
 
@@ -118,7 +128,7 @@ html body {
 }
 
 .score-number {
-  margin: 0 1rem 0 1rem;
+  margin: 0 1rem;
 }
 
 .chat-container {
@@ -137,7 +147,8 @@ html body {
 .chat-message-content {
   display: flex;
   flex-direction: column;
-  padding: 0 0 0 .5rem;
+  padding-left: .5rem;
+  width: 100%;
 }
 
 .chat-message-info {
@@ -175,7 +186,7 @@ html body {
 
 .chat-input:focus {
   border-color: #999;
-  box-shadow: 0 0 0 0 rgba(153, 153, 153, 0.5);
+  box-shadow: 0 0 0 0 rgba(153 153 153 / 0.5);
 }
 
 .chat-post {
@@ -190,4 +201,51 @@ html body {
 
 .chat-post:hover {
   background-color: #333333;
+}
+
+.chat-post:focus {
+  background-color: #333333;
+}
+
+.upcoming-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.upcoming-game {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.upcoming-game:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .scores-card {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .scores-card {
+    grid-column: span 1;
+  }
+  
+  .home-content {
+    padding: 2rem;
+  }
+  
+  .header-container {
+    padding: 0 2rem;
+  }
 }

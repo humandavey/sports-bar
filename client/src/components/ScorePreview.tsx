@@ -16,7 +16,7 @@ export default ({home, homeScore, moment, away, awayScore}: ScorePreviewProps) =
           <h1 className='score-number'>{homeScore}</h1>
         </div>
         <div>
-          <p>{moment}</p>
+          <p style={{color: '#6b7280'}}>{moment}</p>
         </div>
         <div className='score-away-container'>
           <h1 className='score-number'>{awayScore}</h1>
