@@ -2,8 +2,11 @@ import ChatMessage from "../components/ChatMessage";
 import Header from "../components/Header";
 import LeagueSelector from "../components/LeagueSelector";
 import ScorePreview from "../components/ScorePreview";
+import { useState } from "react";
 
 export default () => {
+  const [selectedLeague, setSelectedLeague] = useState('nba');
+
   return (
     <>
       <div className='content'>
@@ -15,10 +18,12 @@ export default () => {
                 <h2 style={{margin: 0}}>Live Scores</h2>
               </div>
               <div className='league-selector-container'>
-                <LeagueSelector />
+                <LeagueSelector selected={selectedLeague} setSelected={setSelectedLeague} />
               </div>
               <div className='scores-container'>
-                <ScorePreview home='Celtics' homeScore={88} moment='Q3 5:45' away='Nets' awayScore={85}/>
+                {selectedLeague === 'nba' &&
+                  <ScorePreview home='Celtics' homeScore={88} moment='Q3 5:45' away='Nets' awayScore={85} />
+                }
               </div>
             </div>
             <div className='card-container discussion-container'>
@@ -43,7 +48,7 @@ export default () => {
                   <p style={{margin: 0, color: '#6b7280'}}>Tomorrow, 7:30 PM</p>
                 </div>
                 <div className='upcoming-game'>
-                  <p style={{margin: 0}}>Cheifs vs. Raiders</p>
+                  <p style={{margin: 0}}>Chiefs vs. Raiders</p>
                   <p style={{margin: 0, color: '#6b7280'}}>Sept 15, 1:00 PM</p>
                 </div>
               </div>
