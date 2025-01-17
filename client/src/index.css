@@ -42,6 +42,15 @@ html body {
   cursor: pointer;
 }
 
+.small-nav {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+}
+
 .content {
   background-color: rgb(243 244 246);
   min-height: 100vh;
@@ -242,7 +251,7 @@ html body {
   }
   
   .home-content {
-    padding: 2rem;
+    padding: .5rem;
   }
   
   .header-container {
