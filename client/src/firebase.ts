@@ -7,7 +7,7 @@ const serverAddresses = {
   'test': TEST_SERVER_ADDRESS
 };
 
-const api = (x: String): string => serverAddresses[process.env.NODE_ENV] + "/" + x;
+const api = (x: String): string => serverAddresses['development'] + "/" + x;
 
 export const getNum = async (): Promise<Number> => {
   return (await fetch(api("getNum"))).json() as Promise<Number>;
